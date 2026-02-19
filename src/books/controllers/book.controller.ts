@@ -18,7 +18,7 @@ return res.json(books);
 async findOne(req :Request, res:Response) {
   const { id } = req.params;
   res.status(200);
-  const book = await bookService
+  const book = await bookService.findOne(id);
   return res.json(book);
 }
 
